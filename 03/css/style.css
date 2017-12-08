@@ -39,7 +39,7 @@
       transform: rotateZ(-90deg)
   }
 
-  .s1 {
+  .s1, .s2 {
       background: url("../img/bj.png");
       height: 100%
   }
@@ -127,7 +127,6 @@
   .s1 .footer p:nth-of-type(2) img {
       position: absolute;
       height: 70px;
-      
   }
 
   .s1 .footer p:nth-of-type(2) img:nth-of-type(1) {
@@ -135,5 +134,104 @@
   }
 
   .s1 .footer p:nth-of-type(2) img:nth-of-type(2) {
+      left: -39px
+  }
+
+  .s2 {
+      color: #06ebca
+  }
+
+  .s2 h2 {
+      padding-top: 30px;
+      margin-bottom: 25px;
+  }
+
+  .s2 h2 ::before {
+      background: url("../img/14.png");
+      background-size: cover;
+      width: 80px;
+      height: 18px;
+      position: absolute;
+      left: 40px;
+      top: 40px;
+      content: ""
+  }
+
+  .s2 h2 ::after {
+      background: url("../img/13.png");
+      background-size: cover;
+      width: 80px;
+      height: 18px;
+      position: absolute;
+      right: 40px;
+      top: 40px;
+      content: ""
+  }
+
+  .s2 h2 small {
+      margin-top: 10px;
+      font-size: 14px;
+      display: block;
+      letter-spacing: 5px
+  }
+
+  .s2 .main>p {
+      color:black;
+      font-weight: bold;
+      position: absolute;
+      bottom: -5px;
+      width: 120px;
+      height: 30px;
+      left: 50%;
+      margin-left: -60px;
+      border-radius: 20px;
+      line-height: 30px;
+      background: -webkit-linear-gradient(left, #09eaff, #0afb9a);
+      /* Safari 5.1 - 6.0 */
+      background: -o-linear-gradient(right, #09eaff, #0afb9a);
+      /* Opera 11.1 - 12.0 */
+      background: -moz-linear-gradient(right, #09eaff, #0afb9a);
+      /* Firefox 3.6 - 15 */
+      background: linear-gradient(to right, #09eaff, #0afb9a);
+      /* 标准的语法 */
+  }
+
+  .s2 .main img {
+      width: 80%;
+  }
+
+  .s2 .main {
+      position: relative
+  }
+
+  .s2 .main .text {
+      position: absolute;
+      top: 30px;
+      width: 270px;
+      left: 72px
+  }
+
+  .s2 .main .text p {
+      font-size: 14px;
+      line-height: 1.6rem;
+      text-align: left
+  }
+
+  .s2 .footer p {
+      height: 70px;
+      position: absolute;
+      bottom: 0;
+  }
+
+  .s2 .footer p img {
+      position: absolute;
+      height: 70px;
+  }
+
+  .s2 .footer p img:nth-of-type(1) {
+      left: 0px
+  }
+
+  .s2 .footer p img:nth-of-type(2) {
       left: -39px
   }
