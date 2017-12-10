@@ -1,0 +1,104 @@
+body,ul,li,p,h1,h2,h3{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	font-size: 16px;
+	background:white;
+	background-size:cover;
+}
+.clearfix:before,
+.clearfix:after{
+	content: " ";
+	display: table;
+	clear: both;
+}
+.header,.footer,.content{
+	margin: 0 auto;
+	width: 1000px;
+}
+.nav li a{
+	text-decoration: none;
+}
+.nav li,.pic-top li,.pic-bottom li{
+	list-style: none;
+}
+.logo,.nav,.nav li,.pic-top li,.pic-bottom li{
+	float: left;
+}
+/*通用样式*/
+
+/*header样式*/
+.header-inner{
+	background: url(../images/qwe.jpg);
+	background-size: cover;
+	
+
+}
+.logo img{
+	width: 100px;
+	height: 50px;
+	margin-right: 100px;
+	margin-left: 100px;
+}
+.nav li{
+		width: 100px;
+		font-size: 24px;
+		text-align: center;
+		line-height: 50px;
+		font-weight: bold;	
+}
+.nav li a:link{
+		color: white;
+		
+}
+.nav li:hover{
+		color: white;
+		background: url(../images/lianjiebg_03.png);
+		background-size: cover;
+		border-radius: 5px;
+}
+
+.nav li a:visited{
+	color: black;
+
+}
+/*header样式*/
+
+/*content样式*/
+.content{
+	background: url(../images/pic--bg_03.png);
+	background-size: cover;
+}
+.content li{
+	width:300px;
+	height: 300px;
+}
+.pic-top img,.pic-bottom img{
+	width:300px;
+	height: 300px;
+}
+.pic-top2,.pic-bottom2{
+	padding-left: 50px;
+	padding-right: 50px;
+}
+.pic-top{
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+.pic-bottom{
+	padding-bottom: 25px;
+}
+/*content样式*/
+
+/*footer样式*/
+.footer-inner{
+	background: url(../images/footerbg_03.png);
+	height: 50px;
+}
+.footer div{
+	text-align: center;
+	line-height: 20px;
+	color: white;
+}
+/*footer样式*/

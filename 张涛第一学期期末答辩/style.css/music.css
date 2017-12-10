@@ -1,0 +1,96 @@
+body,ul,li,p,h1,h2,h3{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	font-size: 16px;
+	background:white;
+	background-size:cover;
+}
+.clearfix:before,
+.clearfix:after{
+	content: " ";
+	display: table;
+	clear: both;
+}
+.header,.footer,.content{
+	margin: 0 auto;
+	width: 1000px;
+}
+.nav li a{
+	text-decoration: none;
+}
+*{
+	list-style: none;
+}
+.logo,.nav,.nav li,.music-top li,.music-bottom li{
+	float: left;
+}
+/*通用样式*/
+
+/*header样式*/
+.header-inner{
+	background: url(../images/qwe.jpg);
+	background-size: cover;
+	
+
+}
+.logo img{
+	width: 100px;
+	height: 50px;
+	margin-right: 100px;
+	margin-left: 100px;
+}
+.nav li{
+		width: 100px;
+		font-size: 24px;
+		text-align: center;
+		line-height: 50px;
+		font-weight: bold;	
+}
+.nav li a:link{
+		color: black;
+		
+}
+.nav li:hover{
+		color: white;
+		background: url(../images/lianjiebg_03.png);
+		background-size: cover;
+		border-radius: 5px;
+}
+
+.nav li a:visited{
+	color: black;
+
+}
+/*header样式*/
+
+/*content样式*/
+.content{
+	background: url(../images/musicbg.jpg);
+	background-size: cover;
+	height: 650px;
+	padding-bottom: 5px;
+}
+.music-top{
+	padding-top: 10px;
+	margin-bottom: 30px;
+}
+
+.music-top2,.music-bottom2{
+	margin-left: 50px;
+	margin-right: 50px;
+}
+/*content样式*/
+
+/*footer样式*/
+.footer-inner{
+	background: url(../images/footerbg_03.png);
+	height: 50px;
+}
+.footer div{
+	text-align: center;
+	line-height: 20px;
+	color: white;
+}
+/*footer样式*/
