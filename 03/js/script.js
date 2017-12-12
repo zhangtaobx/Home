@@ -18,4 +18,16 @@ var swiper = new Swiper('.swiper-container', {
         }
     }
 });
+var music=document.querySelector("#music");
+var musicBtn=document.querySelector("#musicBtn");
+musicBtn.addEventListener('click',function () {
+    if(music.paused){
+        music.play();
+        musicBtn.style.animationPlayState="running";
+    }else {
+        music.pause();
+        musicBtn.style.animationPlayState="paused";
+    }
+})
+
 

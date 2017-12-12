@@ -1,249 +1,713 @@
-  * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box
-  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
 
-  html, body {
-      position: relative;
-      height: 100%;
-  }
+html, body {
+    position: relative;
+    height: 100%;
+}
 
-  body {
-      background: #eee;
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      color: #000;
-      margin: 0;
-      padding: 0;
-  }
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
 
-  .swiper-container {
-      width: 100%;
-      height: 100%;
-  }
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
 
-  .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-  }
+#musicBtn {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 20px;
+    background: black;
+    border-radius: 50%;
+    border: 2px solid #0e0d13;
+    z-index: 100;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    animation: musicKey 3s linear infinite;
+}
 
-  .swiper-button-next {
-      position: absolute;
-      top: auto;
-      bottom: 0;
-      left: 50%;
-      right: auto;
-      margin-left: -10px;
-      transform: rotateZ(-90deg)
-  }
+#musicBtn img {
+    width: 18px;
 
-  .s1, .s2 {
-      background: url("../img/bj.png");
-      height: 100%
-  }
+}
 
-  .s1 .header img {
-      position: absolute;
-  }
+@keyframes musicKey {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
 
-  .s1 .header img:nth-of-type(1) {
-      width: 35px;
-      top: 120px;
-      left: 50px;
-      animation: swing infinite
-  }
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+}
 
-  .s1 .header img:nth-of-type(2) {
-      width: 65px;
-      top: 90px;
-      right: 40px;
-      animation: swing infinite
-  }
+.swiper-button-next {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 50%;
+    right: auto;
+    margin-left: -10px;
+    transform: rotateZ(-90deg)
+}
 
-  .s1 .header img:nth-of-type(3) {
-      width: 55px;
-      left: 35px;
-      bottom: 180px;
-      animation: swing infinite
-  }
+.s1, .s2, .s3 ,.s4,.s5{
+    background: url("../img/bj.png");
+    height: 100%
+}
 
-  .s1 .header img:nth-of-type(4) {
-      width: 50px;
-      right: 50px;
-      bottom: 210px;
-      animation: swing infinite
-  }
+.s1 .header img {
+    position: absolute;
+}
 
-  .s1 .header img:nth-of-type(5) {
-      left: 50%;
-      width: 60%;
-      margin-left: -30%;
-      top: 25%;
-      animation: pulse infinite
-  }
+.s1 .header img:nth-of-type(1) {
+    width: 35px;
+    top: 120px;
+    left: 50px;
 
-  .s1 .main {
-      position: absolute;
-      top: 30%
-  }
+}
 
-  .s1 .main img:nth-of-type(1) {
-      width: 40%
-  }
+.s1 .header img:nth-of-type(2) {
+    width: 65px;
+    top: 90px;
+    right: 40px;
 
-  .s1 .main img:nth-of-type(2) {
-      width: 80%;
-      margin-bottom: 10px
-  }
+}
 
-  .s1 .main .img9 {
-      background: url("../img/9.png");
-      background-size: cover;
-      width: 207px;
-      height: 24px;
-      margin: auto;
-  }
+.s1 .header img:nth-of-type(3) {
+    width: 55px;
+    left: 35px;
+    bottom: 180px;
 
-  .s1 .footer {
-      position: absolute;
-      width: 100%;
-      bottom: 70px;
-      left: 0px
-  }
+}
 
-  .s1 .footer h2 {
-      font-size: 20px;
-      color: #00c7a7;
-  }
+.s1 .header img:nth-of-type(4) {
+    width: 50px;
+    right: 50px;
+    bottom: 210px;
 
-  .s1 .footer p:nth-of-type(1) {
-      font-size: 16px;
-      color: #00c7a7;
-      margin-bottom: 40px;
-  }
+}
 
-  .s1 .footer p:nth-of-type(2) {
-      height: 70px;
-      position: absolute
-  }
+.swing {
+    transform-origin: center;
+}
 
-  .s1 .footer p:nth-of-type(2) img {
-      position: absolute;
-      height: 70px;
-  }
+.s1 .header img:nth-of-type(5) {
+    left: 50%;
+    width: 60%;
+    margin-left: -30%;
+    top: 25%;
+    animation: pulse infinite
+}
 
-  .s1 .footer p:nth-of-type(2) img:nth-of-type(1) {
-      left: 0px
-  }
+.s1 .main {
+    position: absolute;
+    top: 30%
+}
 
-  .s1 .footer p:nth-of-type(2) img:nth-of-type(2) {
-      left: -39px
-  }
+.s1 .main img:nth-of-type(1) {
+    width: 40%
+}
 
-  .s2 {
-      color: #06ebca
-  }
+.s1 .main img:nth-of-type(2) {
+    width: 80%;
+    margin-bottom: 10px
+}
 
-  .s2 h2 {
-      padding-top: 30px;
-      margin-bottom: 25px;
-  }
+.s1 .main .img9 {
+    background: url("../img/9.png");
+    background-size: cover;
+    width: 207px;
+    height: 24px;
+    margin: auto;
+}
 
-  .s2 h2 ::before {
-      background: url("../img/14.png");
-      background-size: cover;
-      width: 80px;
-      height: 18px;
-      position: absolute;
-      left: 40px;
-      top: 40px;
-      content: ""
-  }
+.s1 .footer {
+    position: absolute;
+    width: 100%;
+    bottom: 70px;
+    left: 0px
+}
 
-  .s2 h2 ::after {
-      background: url("../img/13.png");
-      background-size: cover;
-      width: 80px;
-      height: 18px;
-      position: absolute;
-      right: 40px;
-      top: 40px;
-      content: ""
-  }
+.s1 .footer h2 {
+    font-size: 20px;
+    color: #00c7a7;
+}
 
-  .s2 h2 small {
-      margin-top: 10px;
-      font-size: 14px;
-      display: block;
-      letter-spacing: 5px
-  }
+.s1 .footer p:nth-of-type(1) {
+    font-size: 16px;
+    color: #00c7a7;
+    margin-bottom: 40px;
+}
 
-  .s2 .main .main-footer {
-      color: black;
-      font-weight: bold;
-      position: absolute;
-      bottom: -5px;
-      width: 120px;
-      height: 30px;
-      left: 50%;
-      margin-left: -60px;
-      border-radius: 20px;
-      line-height: 30px;
-      background: -webkit-linear-gradient(left, #09eaff, #0afb9a);
-      /* Safari 5.1 - 6.0 */
-      background: -o-linear-gradient(right, #09eaff, #0afb9a);
-      /* Opera 11.1 - 12.0 */
-      background: -moz-linear-gradient(right, #09eaff, #0afb9a);
-      /* Firefox 3.6 - 15 */
-      background: linear-gradient(to right, #09eaff, #0afb9a);
-      /* 标准的语法 */
-  }
+.s1 .footer p:nth-of-type(2) {
+    height: 70px;
+    position: absolute
+}
 
-  .s2 .main img {
-      width: 80%;
-  }
+.s1 .footer p:nth-of-type(2) img {
+    position: absolute;
+    height: 70px;
+}
 
-  .s2 .main {
-      position: relative;
-  }
+.s1 .footer p:nth-of-type(2) img:nth-of-type(1) {
+    left: 0px
+}
 
-  .s2 .main .text {
-      position: absolute;
-      padding: 5%;
-      top: 0px;
-      width: 80%;
-      left: 10%
-  }
+.s1 .footer p:nth-of-type(2) img:nth-of-type(2) {
+    left: -39px
+}
 
-  .s2 .main .text p {
-      font-size: 14px;
-      line-height: 1.6rem;
-      text-align: left
-  }
+.s2 {
+    color: #06ebca
+}
 
-  .s2 .footer {
-      position: absolute;
-      bottom: 0;
-      height: 70px;
-      width: 100%;
-  }
+.s2 h2 {
+    padding-top: 30px;
+    margin-bottom: 25px;
+}
 
-  /* .s2 .footer p {
-      width: 100%;
-      height: 70px;
-  } */
+.s2 h2 ::before {
+    background: url("../img/14.png");
+    background-size: cover;
+    width: 80px;
+    height: 18px;
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    content: ""
+}
 
-  .s2 .footer p img {
-      position: absolute;
-      height: 70px;
-  }
+.s2 h2 ::after {
+    background: url("../img/13.png");
+    background-size: cover;
+    width: 80px;
+    height: 18px;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    content: ""
+}
 
-  .s2 .footer p img:nth-of-type(1) {
-      left: 0px
-  }
+.s2 h2 small {
+    margin-top: 10px;
+    font-size: 14px;
+    display: block;
+    letter-spacing: 5px
+}
 
-  .s2 .footer p img:nth-of-type(2) {
-      left: -39px
-  }
+.s2 .main .main-footer {
+    color: black;
+    font-weight: bold;
+    position: absolute;
+    bottom: -5px;
+    width: 120px;
+    height: 30px;
+    left: 50%;
+    margin-left: -60px;
+    border-radius: 20px;
+    line-height: 30px;
+    background: -webkit-linear-gradient(left, #09eaff, #0afb9a);
+    /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #09eaff, #0afb9a);
+    /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #09eaff, #0afb9a);
+    /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #09eaff, #0afb9a);
+    /* 标准的语法 */
+}
+
+.s2 .main img {
+    width: 80%;
+}
+
+.s2 .main {
+    position: relative;
+}
+
+.s2 .main .text {
+    position: absolute;
+    padding: 5%;
+    top: 0px;
+    width: 80%;
+    left: 10%
+}
+
+.s2 .main .text p {
+    font-size: 14px;
+    line-height: 1.6rem;
+    text-align: left
+}
+
+.s2 .footer {
+    position: absolute;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+}
+
+/* .s2 .footer p {
+    width: 100%;
+    height: 70px;
+} */
+
+.s2 .footer p img {
+    position: absolute;
+    height: 70px;
+}
+
+.s2 .footer p img:nth-of-type(1) {
+    left: 0px
+}
+
+.s2 .footer p img:nth-of-type(2) {
+    left: -39px
+}
+
+.s3 {
+    color: #06ebca
+}
+
+.s3 h2 {
+    padding-top: 30px;
+    /*margin-bottom: 25px;*/
+}
+
+.s3 h2 ::before {
+    background: url("../img/14.png");
+    background-size: cover;
+    width: 80px;
+    height: 18px;
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    content: ""
+}
+
+.s3 h2 ::after {
+    background: url("../img/13.png");
+    background-size: cover;
+    width: 80px;
+    height: 18px;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    content: "";
+
+}
+
+.s3 h2 small {
+    margin-top: 10px;
+    font-size: 14px;
+    display: block;
+    letter-spacing: 5px
+}
+
+.s3 .main {
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+.s3 .main span {
+    position: absolute;
+    text-align: center;
+    border-radius: 50%;
+    background: radial-gradient(circle farthest-corner, #02042b, #046575);
+    font-size: 16px;
+}
+
+.s3 .main span:nth-of-type(1) {
+    width: 132px;
+    height: 132px;
+    line-height: 133px;
+    top: 134px;
+    left: 50%;
+    font-size: 28px;
+    margin-left: -66px;
+    font-weight: bold;
+}
+
+.s3 .main span:nth-of-type(2) {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    top: 70px;
+    left: 25%;
+
+}
+
+.s3 .main span:nth-of-type(3) {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    top: 70px;
+    right: 25%;
+
+}
+
+.s3 .main span:nth-of-type(4) {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    top: 172px;
+    right: 10%;
+
+}
+
+.s3 .main span:nth-of-type(5) {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    top: 275px;
+    right: 25%;
+
+}
+
+.s3 .main span:nth-of-type(6) {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    top: 275px;
+    left: 25%;
+
+}
+
+.s3 .main span:nth-of-type(7) {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    top: 172px;
+    left: 10%;
+
+}
+
+.s3 .main .text {
+    font-size: 16px;
+    position: absolute;
+    width: 72%;
+    text-align: center;
+    margin: auto;
+    left: 11%;
+    padding-left: 3%;
+    border-left: 3px solid #06ebca;
+    top: 364px;
+}
+
+
+
+
+.s4 {
+    color: #06ebca
+}
+
+.s4 h2 {
+    padding-top: 30px;
+    margin-bottom: 25px;
+}
+.s4 h2 ::before {
+    background: url("../img/14.png");
+    background-size: cover;
+    width: 80px;
+    height: 18px;
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    content: ""
+}
+
+.s4 h2 ::after {
+    background: url("../img/13.png");
+    background-size: cover;
+    width: 80px;
+    height: 18px;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    content: ""
+}
+.s4 h2 small {
+    margin-top: 10px;
+    font-size: 14px;
+    display: block;
+    letter-spacing: 5px
+}
+
+
+.s4 .main img {
+    width: 80%;
+}
+
+.s4 .main {
+    position: relative;
+}
+.s4 .main .text .text-left{
+    position: absolute;
+    top: 40px;
+    left: 25%;
+    font-weight: bold;
+}
+.s4 .main .text .text-right{
+    position: absolute;
+    top: 40px;
+    right: 25%;
+    font-weight: bold;
+    color:#019fdc
+}
+.s4 .main .text .text-left span{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    padding: 4px;
+    background: #2cf8b1;
+}
+.s4 .main .text .text-right span{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    padding: 4px;
+    background: #019fdc;
+}
+.s4 .main .text .list1{
+    list-style: none;
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    left: 10%;
+    font-size: 16px;
+    text-align: left;
+}
+.s4 .main .text .list1 li{
+    background: url("../img/listbg_03.png");
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+}
+.s4 .main .text .list1 li div{
+        padding-left: 20px;
+    margin-bottom: 4px;
+}
+.s4 .main .text .list1 li div:nth-of-type(1) span{
+   color: white;
+}
+
+.s4 .main .text .list1 li:nth-of-type(1) div:nth-of-type(2) p{
+     width: 70%;
+     height: 16px;
+     display: inline-block;
+     background: -webkit-linear-gradient(left, #040e29, #26f9b2);
+     /* Safari 5.1 - 6.0 */
+     background: -o-linear-gradient(right, #040e29, #26f9b2);
+     /* Opera 11.1 - 12.0 */
+     background: -moz-linear-gradient(right, #040e29, #26f9b2);
+     /* Firefox 3.6 - 15 */
+     background: linear-gradient(to right, #040e29, #26f9b2);
+
+ }
+.s4 .main .text .list1 li:nth-of-type(1) div:nth-of-type(3) p{
+    width: 35%;
+    height: 16px;
+    display: inline-block;
+    background: -webkit-linear-gradient(left, #040e29, #00bffe);
+    /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #040e29, #00bffe);
+    /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #040e29, #00bffe);
+    /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #040e29, #00bffe);
+
+}
+
+
+.s4 .main .text .list1 li:nth-of-type(2) div:nth-of-type(2) p{
+    width: 60%;
+    height: 16px;
+    display: inline-block;
+    background: -webkit-linear-gradient(left, #040e29, #26f9b2);
+    /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #040e29, #26f9b2);
+    /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #040e29, #26f9b2);
+    /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #040e29, #26f9b2);
+
+}
+.s4 .main .text .list1 li:nth-of-type(2) div:nth-of-type(3) p{
+    width: 30%;
+    height: 16px;
+    display: inline-block;
+    background: -webkit-linear-gradient(left, #040e29, #00bffe);
+    /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #040e29, #00bffe);
+    /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #040e29, #00bffe);
+    /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #040e29, #00bffe);
+
+}
+
+.s4 .main .text .list1 li:nth-of-type(3) div:nth-of-type(2) p{
+    width: 55%;
+    height: 16px;
+    display: inline-block;
+    background: -webkit-linear-gradient(left, #040e29, #26f9b2);
+    /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #040e29, #26f9b2);
+    /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #040e29, #26f9b2);
+    /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #040e29, #26f9b2);
+
+}
+.s4 .main .text .list1 li:nth-of-type(3) div:nth-of-type(3) p{
+    width: 25%;
+    height: 16px;
+    display: inline-block;
+    background: -webkit-linear-gradient(left, #040e29, #00bffe);
+    /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #040e29, #00bffe);
+    /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #040e29, #00bffe);
+    /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #040e29, #00bffe);
+
+}
+
+.s4 .main .text .list1 div:nth-of-type(2) span,.s4 .main .text .list1 div:nth-of-type(3) span{
+        padding-left: 5px;
+}
+
+.s4 .main .text .text-bottom{
+    position: absolute;
+    bottom: 30px;
+    width: 80%;
+    font-size: 16px;
+    left: 10%;
+}
+
+
+
+.s5 {
+    color: #06ebca
+}
+
+.s5 h2 {
+    padding-top: 30px;
+    margin-bottom: 25px;
+}
+
+.s5 h2 ::before {
+    background: url("../img/14.png");
+    background-size: cover;
+    width: 80px;
+    height: 18px;
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    content: ""
+}
+
+.s5 h2 ::after {
+    background: url("../img/13.png");
+    background-size: cover;
+    width: 80px;
+    height: 18px;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    content: "";
+
+}
+
+.s5 h2 small {
+    margin-top: 10px;
+    font-size: 14px;
+    display: block;
+    letter-spacing: 5px
+}
+
+.s5 .main {
+    position: relative;
+}
+
+.s5 .main  img{
+    /*width: 38%;*/
+    /*position: absolute;*/
+}
+.s5 .main .bg1{
+    width: 38%;
+    position: absolute;
+    background: url("../img/12.png");
+    background-size: 100% 100%;
+    width: 38%;
+    height: 170px;
+    left: 10%;
+}
+.s5 .main .bg2{
+    width: 38%;
+    position: absolute;
+    background: url("../img/12.png");
+    background-size: 100% 100%;
+    width: 38%;
+    height: 170px;
+   right: 10%;
+}
+.s5 .main .bg3{
+    width: 38%;
+    position: absolute;
+    background: url("../img/12.png");
+    background-size: 100% 100%;
+    width: 38%;
+    height: 170px;
+    left: 10%;
+    top: 250px;
+}
+.s5 .main .bg4{
+    width: 38%;
+    position: absolute;
+    background: url("../img/12.png");
+    background-size: 100% 100%;
+    width: 38%;
+    height: 170px;
+    right: 10%;
+    top: 250px;
+}
+.s5 .main>div img{
+    margin-top: 15px;
+}
+.s5 .main>div p{
+    font-size: 14px;
+
+}
+.s5 .main>div span{
+    color: black;
+    border-radius: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-weight: bold;
+    background: -webkit-linear-gradient(left, #00e7f9, #01fc9f);
+    /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #00e7f9, #01fc9f);
+    /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #00e7f9, #01fc9f);
+    /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #00e7f9, #01fc9f);
+}
