@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let [x, ...y] = [1, 3, 5, 4];
+        console.log(y);
+
+
+        let [a, b] = [..."sb"];
+        console.log(a);
+        console.log(b);
+
+
+        let num = (...m) => {
+            let local = 0;
+            for (var i of m) {
+                local += i
+            }
+            console.log(local);
+        };
+        num(5, 4, 5, 1)
+
+
+            let arr1=[1,2];
+            let arr2=[3,4];
+            console.log(...arr1,...arr2)
+
+    </script>
+</body>
+
+</html>
