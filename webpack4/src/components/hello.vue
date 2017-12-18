@@ -13,11 +13,11 @@
                 <td>{{user.name}}</td>
                 <td>{{user.danjia}}</td>
                 <td>
-                    <counter :usering="user" :index2="index" @counterplus="plus" @counteradd="add"></counter>
+                    <!--<counter :usering="users" :index="index"></counter>-->
 
-                    <!--<button @click="user.shu=user.shu?user.shu-1:user.shu">-</button>-->
-                    <!--<span v-text="user.shu"></span>-->
-                    <!--<button @click="user.shu=user.shu+1">+</button>-->
+                    <button @click="user.shu=user.shu?user.shu-1:user.shu">-</button>
+                    <span v-text="user.shu"></span>
+                    <button @click="user.shu=user.shu+1">+</button>
 
                 </td>
                 <td><button @click="tianjia(index)">添加到购物车</button></td>
@@ -25,24 +25,50 @@
         </table>
 
 
+        <h1 align="center">购物车</h1>
+        <table>
+            <tr>
+                <td>商品名称</td>
+                <td>商品单价</td>
+                <td>商品数量</td>
+                <td>商品删除</td>
+            </tr>
+            <tr v-for="(ue,index1) in uer">
+                <td>{{ue.name}}</td>
+                <td>{{ue.danjia}}</td>
+                <td>
+                    <!--<counter :usering="ue" :index="index1"></counter>-->
+                    <button @click="ue.shu=ue.shu?ue.shu-1:ue.shu">-</button>
+                    <span class="num1" v-text="ue.shu"></span>
+                    <button @click="ue.shu=ue.shu+1">+</button>
+                </td>
+                <td>
+                    <button @click="shanchu(index1)">删除</button>
 
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5"><button @click="jiesuan()" style="width: 20%;height: 22px;">结算</button></td>
+            </tr>
+        </table>
 
     </div>
 </template>
 
 <script>
-
-    import  bus  from '../bus.js'
-    import counter from './counter.vue'
+//    import counter from 'counter.vue'
+    import  {bus}  from '../main.js'
     export default {
-        components:{counter},
+//        props:["usering","index"],
+        components:{bus},
         data: function () {
             return {
-                users: [{name: "苹果", danjia: 5, shu: 1},
-                    {name: "橘子", danjia: 6, shu: 0},
-                    {name: "香蕉", danjia: 7, shu: 0}
-                    ]
-
+                users: [{name: "苹果", danjia: 5, shu: 1}, {name: "橘子", danjia: 6, shu: 0}, {
+                    name: "香蕉",
+                    danjia: 7,
+                    shu: 0
+                }],
+                uer: []
 
 
             }
@@ -57,16 +83,17 @@
                 for (var i in this.users[index]) {
                     obj[i] = this.users[index][i];
                 }
-                bus.$emit("myevent", obj);
+                this.$emit("myevent", obj);
             },
-            plus(data){
-                if(this.users[data].shu==0){
-                    return
+            shanchu(index1) {
+                this.uer.splice(index1, 1);
+            },
+            jiesuan() {
+                var jieguo = 0;
+                for (var c = 0; c < this.uer.length; c++) {   //c：表示uer的下标
+                    jieguo = jieguo + Number(this.uer[c].danjia) * Number(this.uer[c].shu);
                 }
-                this.users[data].shu--;
-            },
-            add(data){
-                this.users[data].shu++;
+                alert("合计" + jieguo + "元");
             }
         },
 
@@ -82,6 +109,19 @@
 //                self.users[data].shu++;
 //            })
 
+            var self = this;
+            this.$on("myevent", function (data) {
+
+                for (var a = 0; a < self.uer.length; a++) {
+                    if (data.name === self.uer[a].name) {
+                        self.uer[a].shu = Number(self.uer[a].shu) + Number(data.shu);
+                        return;
+                    }
+                }
+
+                this.uer.push(data);
+
+            })
 
         }
 

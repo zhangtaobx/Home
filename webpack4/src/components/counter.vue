@@ -1,22 +1,22 @@
 <template>
 
     <div>
-        <button @click="fun1()">-</button>
-        <span v-text="">{{usering.shu}}</span>
-        <button @click="fun2()">+</button>
+        <button @click="fun1(index)">-</button>
+        <span v-text="">{{usering[index].shu}}</span>
+        <button @click="fun2(index)">+</button>
     </div>
 
 </template>
 
 <script>
+
     export default {
-        props:["usering","index2"],
         methods:{
-            fun1(){
-                this.$emit("counterplus",this.index2);
+            fun1(data){
+                this.$emit("counterplus",data);
             },
-            fun2(){
-                this.$emit("counteradd",this.index2);
+            fun2(data){
+                this.$emit("counteradd",data);
             }
         }
 

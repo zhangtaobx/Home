@@ -1,16 +1,16 @@
 import Vue from "vue"
 import hello from "./components/hello.vue"
-import world from "./components/world.vue"
+// import world from "./components/world.vue"
 
 
-
+var bus = new Vue();
 //
 new Vue({
     el:"#app",
-    components:{hello,world},
+    components:{hello},
 
 });
-console.log("hello world");
+console.log("sfd")
 
 
 
